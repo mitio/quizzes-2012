@@ -2,6 +2,6 @@
 
 <ul>
 	<% @quizzes.each do |quiz| %>
-		<li><%= quiz.name %></li>
+		<%= render partial: 'quiz', locals: {quiz: quiz} %>
 	<% end %>
 </ul>

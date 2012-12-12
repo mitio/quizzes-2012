@@ -1,7 +1,7 @@
 <h1>Анкети</h1>
 
 <ul>
-	<% @quizzes.each do |quiz| %>
-		<%= render partial: 'quiz', object: quiz %>
+	<% @quizzes.each do |q| %>
+		<%= render q %>
 	<% end %>
 </ul>

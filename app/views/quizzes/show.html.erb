@@ -1,0 +1,9 @@
+<h1><%= @quiz.name %></h1>
+
+<p>В анкетата има <%= @quiz.questions.size %> въпрос(а)</p>
+
+<ol>
+	<% @quiz.questions.each do |question| %>
+		<li><%= link_to question.name, [@quiz, question] %></li>
+	<% end %>
+</ol>

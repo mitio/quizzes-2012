@@ -1,5 +1,7 @@
 Quizzes::Application.routes.draw do
-  resources :quizzes
+  resources :quizzes do
+    resources :questions
+  end
   root to: 'quizzes#index'
 
   ActiveAdmin.routes(self)

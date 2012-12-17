@@ -1,9 +1,11 @@
 class QuizzesController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
-    @quizzes = Quiz.all
+    @quizzes = current_user.quizzes
   end
 
   def show
-    @quiz = Quiz.find params[:id]
+    @quiz = current_user.quizzes.find params[:id]
   end
 end

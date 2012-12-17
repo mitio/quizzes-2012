@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
  */
+
+p.flash {
+	padding: 10px;
+	border: 1px solid white;
+
+	&.notice {
+		background-color: #deffe3;
+		border-color: #080;
+		color: #080;
+	}
+	&.alert {
+		background-color: #ffe7de;
+		border-color: #e33;
+		color: #e33;
+	}
+}

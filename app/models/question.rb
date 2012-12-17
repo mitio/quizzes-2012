@@ -4,5 +4,5 @@ class Question < ActiveRecord::Base
   validates_presence_of :name, :quiz_id
   validates_uniqueness_of :name, scope: :quiz_id
 
-  attr_accessible :name, :quiz_id
+  attr_accessible :name, :quiz_id, :description
 end

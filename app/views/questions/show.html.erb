@@ -2,4 +2,8 @@
 
 <p>Този въпрос е част от анкетата <%= link_to @question.quiz.name, @question.quiz %></p>
 
-Детайли за въпроса...
+<% if @question.description.present? %>
+	<div class="description">
+		<%= simple_format @question.description %>
+	</div>
+<% end %>
